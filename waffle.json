@@ -1,7 +1,6 @@
-{
+ {
   "compilerType": "solcjs",
   "compilerVersion": "./node_modules/solc",
-  "sourceDirectory": "/home/odyomin/xswap/liquidity-staker/flattened_contracts/",
   "outputType": "all",
   "compilerOptions": {
     "outputSelection": {
@@ -11,7 +10,8 @@
           "evm.deployedBytecode.object",
           "abi",
           "evm.bytecode.sourceMap",
-          "evm.deployedBytecode.sourceMap"
+          "evm.deployedBytecode.sourceMap",
+          "metadata"
         ],
         "": ["ast"]
       }
