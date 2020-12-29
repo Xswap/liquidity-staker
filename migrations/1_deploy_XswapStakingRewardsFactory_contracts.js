@@ -13,7 +13,7 @@ module.exports = async function (deployer, network, addresses) {
     rewardsToken = await '0x380291A9A8593B39f123cF39cc1cc47463330b1F'; // xswapAddress
     stakingRewardsGenesis = await 1605484800; // 2020-11-16 02:00:00 +0200
   } else {
-    throw new Error('No Xswap Swap on this network')
+    throw new Error('No Xswap on this network')
   }
   
   await deployer.deploy(XswapStakingRewardsFactory, rewardsToken, stakingRewardsGenesis);
