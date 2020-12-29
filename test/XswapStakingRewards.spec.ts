@@ -32,7 +32,7 @@ describe('XswapStakingRewards', () => {
   })
 
   it('deploy cost', async () => {
-    const stakingRewards = await deployContract(wallet, StakingRewards, [
+    const stakingRewards = await deployContract(wallet, stakingRewards, [
       wallet.address,
       rewardsToken.address,
       stakingToken.address,
