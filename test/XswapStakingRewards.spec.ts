@@ -6,11 +6,11 @@ import { ecsign } from 'ethereumjs-util'
 import { stakingRewardsFixture } from './fixtures'
 import { REWARDS_DURATION, expandTo18Decimals, mineBlock, getApprovalDigest } from './utils'
 
-import EliteStakingRewards from '../build/EliteStakingRewards.json'
+import XswapStakingRewards from '../build/XswapStakingRewards.json'
 
 chai.use(solidity)
 
-describe('EliteStakingRewards', () => {
+describe('XswapStakingRewards', () => {
   const provider = new MockProvider({
     ganacheOptions: {
       hardfork: 'istanbul',
@@ -32,7 +32,7 @@ describe('EliteStakingRewards', () => {
   })
 
   it('deploy cost', async () => {
-    const stakingRewards = await deployContract(wallet, EliteStakingRewards, [
+    const stakingRewards = await deployContract(wallet, XswapStakingRewards, [
       wallet.address,
       rewardsToken.address,
       stakingToken.address,

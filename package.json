@@ -1,16 +1,16 @@
 {
-  "name": "@eliteswap/liquidity-staker",
+  "name": "@xswap/liquidity-staker",
   "version": "1.0.3",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EthereumEliteswap/liquidity-staker.git"
+    "url": "git+https://github.com/xswap/liquidity-staker.git"
   },
   "keywords": [
-    "eliteswap",
+    "xswap",
     "ethereum",
     "liquidity-staker",
-    "eliteswap-v2"
+    "xswap-v2"
   ],
   "files": [
     "contracts",
@@ -33,7 +33,7 @@
     "openzeppelin-solidity-2.3.0": "npm:openzeppelin-solidity@2.3.0"
   },
   "devDependencies": {
-    "@eliteswap/v2-core": "^1.0.1",
+    "@xswap/v2-core": "^1.0.1",
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
     "chai": "^4.2.0",
@@ -46,11 +46,11 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   },
-  "description": "Liquidity staker contract for Elite Swap",
+  "description": "Liquidity staker contract for Xswap",
   "bugs": {
-    "url": "https://github.com/EthereumEliteswap/liquidity-staker/issues"
+    "url": "https://github.com/xswap/liquidity-staker/issues"
   },
-  "homepage": "https://eliteswap.org",
+  "homepage": "https://xswap.org",
   "main": "index.js",
   "directories": {
     "test": "test"

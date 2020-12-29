@@ -7,10 +7,10 @@ import "openzeppelin-solidity-2.3.0/contracts/token/ERC20/SafeERC20.sol";
 import "openzeppelin-solidity-2.3.0/contracts/utils/ReentrancyGuard.sol";
 
 // Inheritance
-import "./interfaces/IEliteStakingRewards.sol";
-import "./EliteRewardsDistributionRecipient.sol";
+import "./interfaces/IXswapStakingRewards.sol";
+import "./XswapRewardsDistributionRecipient.sol";
 
-contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRecipient, ReentrancyGuard {
+contract XswapStakingRewards is IXswapStakingRewards, XswapRewardsDistributionRecipient, ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
@@ -82,7 +82,7 @@ contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRe
         _balances[msg.sender] = _balances[msg.sender].add(amount);
 
         // permit
-        IEliteswapV2ERC20(address(stakingToken)).permit(msg.sender, address(this), amount, deadline, v, r, s);
+        IXswapswapV2ERC20(address(stakingToken)).permit(msg.sender, address(this), amount, deadline, v, r, s);
 
         stakingToken.safeTransferFrom(msg.sender, address(this), amount);
         emit Staked(msg.sender, amount);
@@ -161,6 +161,6 @@ contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRe
     event RewardPaid(address indexed user, uint256 reward);
 }
 
-interface IEliteswapV2ERC20 {
+interface IXswapswapV2ERC20 {
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external;
 }

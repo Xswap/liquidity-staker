@@ -421,11 +421,11 @@ contract ReentrancyGuard {
 
 // Inheritance
 
-// File: contracts/interfaces/IEliteStakingRewards.sol
+// File: contracts/interfaces/IXswapStakingRewards.sol
 
 pragma solidity >=0.4.24;
 
-interface IEliteStakingRewards {
+interface IXswapStakingRewards {
     // Views
     function lastTimeRewardApplicable() external view returns (uint256);
 
@@ -450,26 +450,26 @@ interface IEliteStakingRewards {
     function exit() external;
 }
 
-// File: contracts/EliteRewardsDistributionRecipient.sol
+// File: contracts/XswapRewardsDistributionRecipient.sol
 
 pragma solidity ^0.5.16;
 
-contract EliteRewardsDistributionRecipient {
+contract XswapRewardsDistributionRecipient {
     address public rewardsDistribution;
 
     function notifyRewardAmount(uint256 reward) external;
 
     modifier onlyRewardsDistribution() {
-        require(msg.sender == rewardsDistribution, "Caller is not EliteRewardsDistribution contract");
+        require(msg.sender == rewardsDistribution, "Caller is not XswapRewardsDistribution contract");
         _;
     }
 }
 
-// File: contracts/EliteStakingRewards.sol
+// File: contracts/XswapStakingRewards.sol
 
 pragma solidity ^0.5.16;
 
-contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRecipient, ReentrancyGuard {
+contract XswapStakingRewards is IXswapStakingRewards, XswapRewardsDistributionRecipient, ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
@@ -541,7 +541,7 @@ contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRe
         _balances[msg.sender] = _balances[msg.sender].add(amount);
 
         // permit
-        IEliteswapV2ERC20(address(stakingToken)).permit(msg.sender, address(this), amount, deadline, v, r, s);
+        IXswapswapV2ERC20(address(stakingToken)).permit(msg.sender, address(this), amount, deadline, v, r, s);
 
         stakingToken.safeTransferFrom(msg.sender, address(this), amount);
         emit Staked(msg.sender, amount);
@@ -620,6 +620,6 @@ contract EliteStakingRewards is IEliteStakingRewards, EliteRewardsDistributionRe
     event RewardPaid(address indexed user, uint256 reward);
 }
 
-interface IEliteswapV2ERC20 {
+interface IXswapswapV2ERC20 {
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external;
 }

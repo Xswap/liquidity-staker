@@ -1,7 +1,7 @@
 pragma solidity >=0.4.24;
 
 
-interface IEliteStakingRewards {
+interface IXswapStakingRewards {
     // Views
     function lastTimeRewardApplicable() external view returns (uint256);
 

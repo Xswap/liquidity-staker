@@ -1,11 +1,11 @@
-# Elite Swap Liquidity Staker
+# Xswap Liquidity Staker
 
 Forked from 
 [https://github.com/Uniswap/liquidity-staker](https://github.com/Uniswap/liquidity-staker)
 
-[![Version](https://img.shields.io/npm/v/@eliteswap/liquidity-staker)](https://www.npmjs.com/package/@eliteswap/liquidity-staker)
+[![Version](https://img.shields.io/npm/v/@xswap/liquidity-staker)](https://www.npmjs.com/package/@xswap/liquidity-staker)
 
-The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/browse/@eliteswap/liquidity-staker@latest/).
+The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/browse/@xswap/liquidity-staker@latest/).
 
 # Local Development
 

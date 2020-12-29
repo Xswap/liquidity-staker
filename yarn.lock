@@ -45,9 +45,9 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@eliteswap/v2-core@^1.0.1":
+"@xswap/v2-core@^1.0.1":
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@eliteswap/v2-core/-/v2-core-1.0.4.tgz#7c9d552b5ad6f9824f240aba56e5e9fac1698425"
+  resolved "https://registry.yarnpkg.com/@xswap/v2-core/-/v2-core-1.0.4.tgz#7c9d552b5ad6f9824f240aba56e5e9fac1698425"
   integrity sha512-7FpIVKJAM7aPhH+o0OJhnZj6H+YRXi19GabQnrx3AZonGVK6AD0Ze4PciWQdzMMryvS2RpQv1VXMMCyyLL0uWQ==
   dependencies:
     abstract-leveldown "^5.0.0"

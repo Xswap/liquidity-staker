@@ -5,11 +5,11 @@ import { solidity, MockProvider, createFixtureLoader } from 'ethereum-waffle'
 import { stakingRewardsFactoryFixture } from './fixtures'
 import { mineBlock } from './utils'
 
-import EliteStakingRewards from '../build/EliteStakingRewards.json'
+import XswapStakingRewards from '../build/XswapStakingRewards.json'
 
 chai.use(solidity)
 
-describe('EliteStakingRewardsFactory', () => {
+describe('XswapStakingRewardsFactory', () => {
   const provider = new MockProvider({
     ganacheOptions: {
       hardfork: 'istanbul',
@@ -49,7 +49,7 @@ describe('EliteStakingRewardsFactory', () => {
     it('fails if called twice for same token', async () => {
       await stakingRewardsFactory.deploy(stakingTokens[1].address, 10000)
       await expect(stakingRewardsFactory.deploy(stakingTokens[1].address, 10000)).to.revertedWith(
-        'EliteStakingRewardsFactory::deploy: already deployed'
+        'XswapStakingRewardsFactory::deploy: already deployed'
       )
     })
 
@@ -73,7 +73,7 @@ describe('EliteStakingRewardsFactory', () => {
       const [stakingRewardsAddress] = await stakingRewardsFactory.stakingRewardsInfoByStakingToken(
         stakingTokens[1].address
       )
-      const stakingRewards = new Contract(stakingRewardsAddress, EliteStakingRewards.abi, provider)
+      const stakingRewards = new Contract(stakingRewardsAddress, XswapStakingRewards.abi, provider)
       expect(await stakingRewards.rewardsDistribution()).to.eq(stakingRewardsFactory.address)
       expect(await stakingRewards.stakingToken()).to.eq(stakingTokens[1].address)
       expect(await stakingRewards.rewardsToken()).to.eq(rewardsToken.address)
@@ -89,7 +89,7 @@ describe('EliteStakingRewardsFactory', () => {
 
     it('called before any deploys', async () => {
       await expect(stakingRewardsFactory.notifyRewardAmounts()).to.be.revertedWith(
-        'EliteStakingRewardsFactory::notifyRewardAmounts: called before any deploys'
+        'XswapStakingRewardsFactory::notifyRewardAmounts: called before any deploys'
       )
     })
 
@@ -102,7 +102,7 @@ describe('EliteStakingRewardsFactory', () => {
           const [stakingRewardsAddress] = await stakingRewardsFactory.stakingRewardsInfoByStakingToken(
             stakingTokens[i].address
           )
-          stakingRewards.push(new Contract(stakingRewardsAddress, EliteStakingRewards.abi, provider))
+          stakingRewards.push(new Contract(stakingRewardsAddress, XswapStakingRewards.abi, provider))
         }
       })
 
