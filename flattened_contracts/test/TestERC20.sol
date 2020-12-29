@@ -1,4 +1,4 @@
-// File: openzeppelin-solidity-2.3.0/contracts/token/ERC20/IERC20.sol
+// File: openzeppelin-solidity-3.3.0/contracts/token/ERC20/IERC20.sol
 
 pragma solidity ^0.5.0;
 
@@ -77,7 +77,7 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/token/ERC20/ERC20Detailed.sol
+// File: openzeppelin-solidity-3.3.0/contracts/token/ERC20/ERC20Detailed.sol
 
 pragma solidity ^0.5.0;
 
@@ -133,7 +133,7 @@ contract ERC20Detailed is IERC20 {
     }
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/math/SafeMath.sol
+// File: openzeppelin-solidity-3.3.0/contracts/math/SafeMath.sol
 
 pragma solidity ^0.5.0;
 
@@ -243,7 +243,7 @@ library SafeMath {
     }
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/token/ERC20/ERC20.sol
+// File: openzeppelin-solidity-3.3.0/contracts/token/ERC20/ERC20.sol
 
 pragma solidity ^0.5.0;
 
@@ -473,7 +473,7 @@ contract ERC20 is IERC20 {
     }
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/access/Roles.sol
+// File: openzeppelin-solidity-3.3.0/contracts/access/Roles.sol
 
 pragma solidity ^0.5.0;
 
@@ -512,7 +512,7 @@ library Roles {
     }
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/access/roles/MinterRole.sol
+// File: openzeppelin-solidity-3.3.0/contracts/access/roles/MinterRole.sol
 
 pragma solidity ^0.5.0;
 
@@ -557,7 +557,7 @@ contract MinterRole {
     }
 }
 
-// File: openzeppelin-solidity-2.3.0/contracts/token/ERC20/ERC20Mintable.sol
+// File: openzeppelin-solidity-3.3.0/contracts/token/ERC20/ERC20Mintable.sol
 
 pragma solidity ^0.5.0;
 
