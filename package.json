@@ -23,7 +23,7 @@
     "precompile": "rimraf ./build/",
     "compile": "waffle",
     "pretest": "yarn compile",
-    "test": "mocha --timeout 50000",
+    "test": "mocha --timeout 50000 -R mocha-multi",
     "lint": "prettier ./test/**/*.ts --check",
     "prepublishOnly": "yarn test"
   },
