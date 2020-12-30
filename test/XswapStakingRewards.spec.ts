@@ -38,7 +38,7 @@ describe('XswapStakingRewards', () => {
       stakingToken.address,
     ])
     const receipt = await provider.getTransactionReceipt(stakingRewards.deployTransaction.hash)
-    expect(receipt.gasUsed).to.eq('2509106')
+    expect(receipt.gasUsed).to.eq('1419523')
   })
 
   it('rewardsDuration', async () => {
