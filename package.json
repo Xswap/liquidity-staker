@@ -1,6 +1,6 @@
 {
   "name": "@xswap/liquidity-staker",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "author": "",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "precompile": "rimraf ./build/",
     "compile": "waffle",
     "pretest": "yarn compile",
-    "test": "mocha",
+    "test": "mocha --timeout 50000",
     "lint": "prettier ./test/**/*.ts --check",
     "prepublishOnly": "yarn test"
   },
@@ -35,11 +35,11 @@
   "devDependencies": {
     "@xswap/v2-core": "^1.0.1",
     "@types/chai": "^4.2.12",
-    "@types/mocha": "^8.0.3",
+    "@types/mocha": "^8.2.0",
     "chai": "^4.2.0",
-    "ethereum-waffle": "^3.1.0",
+    "ethereum-waffle": "^4.0.0",
     "ethereumjs-util": "^7.0.5",
-    "mocha": "^8.1.3",
+    "mocha": "^8.2.0",
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
     "solc": "0.5.16",
